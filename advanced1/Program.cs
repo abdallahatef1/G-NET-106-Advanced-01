@@ -99,7 +99,12 @@
     /// Covariance                   Contravariance
     /// Uses out                        Uses in
     /// Used for return/output       Used for input/parameters
-    
+
+
+    #endregion
+
+    #region Q18:How do static members work in generic types?
+    //In a generic class, each type gets its own copy of static members.
 
     #endregion
 
