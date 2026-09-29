@@ -79,12 +79,26 @@
         //The default keyword returns the default value of the generic type T.
         #endregion
 
-        #region Q15: What is covariance? Explain the 'out' keyword. 
+        #region Q15:What is covariance? Explain the 'out' keyword. 
         //Covariance allows you to use a more specific type where a more general type is expected The out keyword is used to make a generic interface covariant.
+        //interface IProducer<out T>
+        //{
+        //    T Get();
+        }
         #endregion
 
+    #region  Q16:What is contravariance? Explain the 'in' keyword.
+    //Contravariance allows you to use a more general type where a more specific type is expected.The in keyword is used for contravariance.
+    //interface IProducer<in T>
+    //{
+    //    void Use(T item);
+
+    #endregion
 
 
 
-    }
+
+
+
 }
+
