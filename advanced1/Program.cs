@@ -10,6 +10,18 @@
 
             #endregion
 
+            #region Q4:What is a generic method? Write Swap<T> method.
+
+            //A generic method has its own type parameter, and the compiler usually infers it.
+            static void Swap<T>(ref T a, ref T b)
+            {
+                T temp = a;
+                a = b;
+                b = temp;
+            }
+            #endregion
+
+
 
         }
     }
