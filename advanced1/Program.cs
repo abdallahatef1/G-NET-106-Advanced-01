@@ -77,9 +77,13 @@
         #region  Q13:What does the 'default' keyword do in generics?
 
         //The default keyword returns the default value of the generic type T.
-        #endregion 
+        #endregion
 
-        
+        #region Q15: What is covariance? Explain the 'out' keyword. 
+        //Covariance allows you to use a more specific type where a more general type is expected The out keyword is used to make a generic interface covariant.
+        #endregion
+
+
 
 
     }
