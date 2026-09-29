@@ -95,6 +95,14 @@
 
     #endregion
 
+    #region Q17: What is the difference between covariance and contravariance?
+    /// Covariance                   Contravariance
+    /// Uses out                        Uses in
+    /// Used for return/output       Used for input/parameters
+    
+
+    #endregion
+
 
 
 
