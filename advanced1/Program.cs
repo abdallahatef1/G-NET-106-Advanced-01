@@ -10,7 +10,85 @@
 
             #endregion
 
-           
+            #region q2 
+            Console.WriteLine("--- Q2: Container<T> ---");
+            Container<string> c = new Container<string>();
+            c.Add("Hello");
+            c.Add("World");
+            Console.WriteLine(c.Get(0) + " " + c.Get(1));
+
+            #endregion
+            #region q3
+            Console.WriteLine("--- Q3: Pair<TKey,TValue> ---");
+            Pair<string, int> p = new Pair<string, int>("Age", 30);
+            Console.WriteLine(p.Key + " = " + p.Value);
+            #endregion
+            #region q4
+            Console.WriteLine("--- Q4: Swap<T> ---");
+            int x = 1, y = 2;
+            Swap(ref x, ref y);
+            Console.WriteLine("x=" + x + ", y=" + y);
+
+            #endregion
+            #region q5
+            Console.WriteLine("--- Q5: FindMax<T> ---");
+            Console.WriteLine(FindMax(new int[] { 3, 9, 2, 7 }));
+            Console.WriteLine(FindMax(new string[] { "apple", "pear", "banana" }));
+
+            #endregion
+            #region q7
+            Console.WriteLine("--- Q7: struct constraint ---");
+            StructWrapper<int> sw = new StructWrapper<int>();
+            sw.Value = 42;
+            Console.WriteLine(sw.Value);
+            #endregion
+            #region q8
+            Console.WriteLine("--- Q8: class constraint ---");
+            ClassWrapper<string> cw = new ClassWrapper<string>();
+            cw.Item = "I am a reference type";
+            Console.WriteLine(cw.Item);
+            #endregion
+            #region q9
+            Console.WriteLine("--- Q9: new() constraint ---");
+            List<int> newList = Create<List<int>>();
+            Console.WriteLine("Created list, count = " + newList.Count);
+
+            #endregion
+            #region q10
+            Console.WriteLine("--- Q10: interface constraint ---");
+            List<IShape> shapes = new List<IShape> { new Circle(1), new Square(2) };
+            Console.WriteLine("Total area: " + TotalArea(shapes));
+            #endregion
+            #region q11
+            Console.WriteLine("--- Q11: base class constraint ---");
+            MakeSound(new Dog());
+            MakeSound(new Animal());
+
+            #endregion
+            #region q12
+            Console.WriteLine("--- Q12: multiple constraints ---");
+            Factory<Dog> f = new Factory<Dog>();
+            Dog d = f.Build();
+            Console.WriteLine(d.Speak());
+            d.play();
+            #endregion
+            #region q20
+            Console.WriteLine("--- Q20: Cache<TKey,TValue> ---");
+            Cache<string, int> cache = new Cache<string, int>(TimeSpan.FromSeconds(1));
+            cache.Add("a", 100);
+            Console.WriteLine("Contains a: " + cache.Contains("a"));
+            Console.WriteLine("Get a: " + cache.Get("a"));
+            Thread.Sleep(1500);
+            Console.WriteLine("After 1s, contains a: " + cache.Contains("a"));
+            cache.Add("b", 200);
+            cache.Remove("b");
+            Console.WriteLine("After Remove, contains b: " + cache.Contains("b"));
+
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
+            #endregion
+
+
 
 
 

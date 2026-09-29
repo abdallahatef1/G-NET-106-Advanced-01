@@ -4,10 +4,10 @@ using System.Text;
 
 namespace advanced1
 {
-    internal class ClassWrappe<T> where T : class
+    internal class ClassWrapper<T> where T : class
     {
         //Q8
         // The class constraint is used with generics to specify that the type T must be a reference type
-        public T ? Item;
+        public T  Item;
     }
 }
