@@ -40,5 +40,24 @@
         }
         #endregion
 
+        #region Q9:What is the 'new()' constraint? Write an example.
+        //The new() constraint specifies that the generic type T must have a public parameterless constructor.
+        static T Create<T>() where T : new()
+        {
+            return new T();
+        }
+
+        #endregion
+
+        #region Q10:What is the interface constraint? Write an example.
+        // The interface constraint specifies that the generic type T must implement a specific interface.
+        static double TotalArea<T>(List<T> shapes) where T : IShape
+        {
+            return shapes.Sum(s => s.Area());
+        }
+
+
+        #endregion
+
     }
 }
