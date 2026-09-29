@@ -108,6 +108,10 @@
 
     #endregion
 
+    #region Q19:How can you inherit from a generic class?
+    //A class can inherit from a generic class by specifying the type for T.
+    #endregion
+
 
 
 
