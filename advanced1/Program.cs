@@ -59,5 +59,28 @@
 
         #endregion
 
+        #region Q11: What is the base class constraint? Write an example.
+        //The base class constraint specifies that the generic type T must inherit from a specific base class.
+        static void MakeSound<T>(T animal) where T : Animal
+        {
+            Console.WriteLine(animal.Speak());
+        }
+
+
+        #endregion
+
+        #region Q12: How do you apply multiple constraints? Write an example. 
+        //We can apply multiple constraints to a generic type by using where T : followed by the constraints separated by commas.
+
+        #endregion
+
+        #region  Q13:What does the 'default' keyword do in generics?
+
+        //The default keyword returns the default value of the generic type T.
+        #endregion 
+
+        
+
+
     }
 }
